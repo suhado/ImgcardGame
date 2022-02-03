@@ -40,14 +40,14 @@ function clicked(num) {
         return item !== value;
     });
 
-    document.getElementById(num).style.boxShadow='1px 4px 0 rgb(0,0,0,0.3)';
+    document.getElementById(num).style.border='none';
 }
 
   // b. 클릭되어 있지 않으면 배열에 더하고
   else {
     const tmpArray = [my_answer]
     answerArray = [...answerArray, ...tmpArray];
-    document.getElementById(num).style.boxShadow='5px 8px 0 #8d2cd37b';
+    document.getElementById(num).style.border='5px solid rgb(200, 230, 80)';
   }
 
   // 클릭시 효과음
@@ -67,7 +67,7 @@ function restart() {
   const cards = document.querySelectorAll(".card");
   for (let i = 0; i < cards.length; i++) {
     const item = cards.item(i);
-    item.style.boxShadow='1px 4px 0 rgb(0,0,0,0.3)';
+    item.style.border='none';
   }
 }
 
