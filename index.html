@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="utf-8">
+  <title>SUHA's taste</title>
+  <link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+
+<body id="contents">
+  <header>
+    <h2 id="title">수하의 취향을 맞춰줘!</h2>
+    <div class="landing" id="start">
+      <img id="startText" src="img/start.png">
+      <button id="startbtn" onclick="start()">시작하기</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section>
+      <div class="cardSet mainpage" style="visibility: hidden">
+        <img class="card" onclick="clicked(this.id)" id="0" src='img/그림1.png' alt="coffee icon">
+        <img class="card" onclick="clicked(this.id)" id="1" src='img/그림2.png' alt="drawing icon">
+        <img class="card" onclick="clicked(this.id)" id="2"  src='img/그림3.png' alt="horrormovie icon">
+        <img class="card" onclick="clicked(this.id)" id="3" src='img/그림4.png' alt="coffee icon">
+        <img class="card" onclick="clicked(this.id)" id="4" src='img/그림5.png' alt="drawing icon">
+        <img class="card" onclick="clicked(this.id)" id="5"  src='img/그림6.png' alt="horrormovie icon">
+        <img class="card" onclick="clicked(this.id)" id="6"  src='img/그림7.png' alt="horrormovie icon">
+        <img class="card" onclick="clicked(this.id)" id="7"  src='img/그림8.png' alt="horrormovie icon">
+      </div>
+    </section>
+
+    <section>
+      <div class="btns mainpage" style="visibility: hidden"> 
+        <button id="restart" onclick="restart()">다시하기</button>
+        <button id="answer" onclick="answer()">정답 확인하기</button>
+      </div>
+    </section>
+  </main>
+    <section>
+      <div class="modal" id="correct" style="display: none;">
+        <div class="modal_correct">
+          <img id="correctImg" src="img/me.PNG">
+          <img id="correctText" src="img/correctText.png">
+          <img id="closeicon" onclick="closecorrect()" src="img/close.png">
+        </div>
+      </div>
+  
+      <div class="modal" id="wrong" style="display: none;">
+        <div class="modal_wrong">
+          <img id="wrongImg" src="img/sad.png">
+          <img id="wrongText" src="img/wrongText.png">
+          <img id="closeicon" onclick="closewrong()" src="img/close.png">
+        </div>
+      </div>
+    </section>
+  
+
+  <footer>
+    <buton id="ref_btn" onclick="ref('refs')";>이미지 출처 보기 ⬇️</button>
+      <div id="refs" style="display:none;">
+        <a href="https://www.flaticon.com/free-icons/music" title="music icons">Music icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/beer" title="beer icons">Beer icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/books" title="books icons">Books icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/coffee" title="coffee icons">Coffee icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/walking" title="walking icons">Walking icons created by Victoruler - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/beer" title="beer icons">Beer icons created by Good Ware - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/tree" title="tree icons">Tree icons created by Eucalyp - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/horror" title="horror icons">Horror icons created by Darius Dan - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/film" title="film icons">Film icons created by Octopocto - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/close" title="close icons">Close icons created by Pixel perfect - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/sad" title="sad icons">Sad icons created by Freepik - Flaticon</a>
+      </div>
+  </footer>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
