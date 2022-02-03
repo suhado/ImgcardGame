@@ -19,10 +19,22 @@ function start() {
   } 
 }
 
-// [bgm음소거] 버튼
-function mute() {
+// [soundoff] 버튼
+function soundoff() {
   const audio = document.getElementById('bgm'); 
-    audio.pause(); 
+  audio.pause();
+
+  document.getElementById('soundon').style.display='flex';
+  document.getElementById('soundoff').style.display='none';
+}
+
+// [soundon] 버튼
+function soundon() {
+  const audio = document.getElementById('bgm'); 
+  audio.play();
+
+  document.getElementById('soundoff').style.display='flex';
+  document.getElementById('soundon').style.display='none';
 }
 
 
@@ -47,7 +59,7 @@ function clicked(num) {
   else {
     const tmpArray = [my_answer]
     answerArray = [...answerArray, ...tmpArray];
-    document.getElementById(num).style.border='5px solid rgb(200, 230, 80)';
+    document.getElementById(num).style.border='3px solid rgb(200, 230, 80)';
   }
 
   // 클릭시 효과음

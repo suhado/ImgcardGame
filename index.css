@@ -41,7 +41,7 @@
     visibility: hidden;
   }
 
-  #mute {
+  #soundon, #soundoff {
     position: fixed;
     right: 5rem;
     top: 5rem;
@@ -136,7 +136,7 @@
   .card:active { 
     box-shadow: 1px 1px 0 rgb(0,0,0,0.5); 
     position: relative; 
-    top:2px; 
+    top:3px;
   }
 
   .btns {
@@ -147,7 +147,7 @@
     justify-content: center;
   }
 
-  #answer {
+  #answer, #restart {
     z-index: 8;
     height: 40px;
     width: 140px;
@@ -176,26 +176,9 @@
   }
 
   #restart {
-    z-index: 8;
-    height: 40px;
-    width: 140px;
-    justify-content: center;
-    align-items: center;
     background-color: #e7f4ff;
     border: 1px solid #e0f1fe;
-    border-radius: 11px;
     color: #2c85d3;
-    cursor: pointer;
-    display: flex;
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 30px;
-    padding: 2px 12px;
-    text-align: left;
-    text-decoration: none;
-    text-shadow: none;
-    transition: border .2s ease-in-out;
-    touch-action: manipulation;
   }
 
   #restart:hover {
