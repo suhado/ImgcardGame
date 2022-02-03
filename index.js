@@ -9,7 +9,7 @@ function start() {
     item.style.visibility='visible';
   }
 
-  // bgm
+  // 시작하기 버튼 누르면 bgm 실행
   const audio = document.getElementById('bgm'); 
   if (audio.paused) { 
       audio.play(); 
@@ -19,7 +19,7 @@ function start() {
   } 
 }
 
-// [bgm 음소거] 버튼
+// [bgm음소거] 버튼
 function mute() {
   const audio = document.getElementById('bgm'); 
     audio.pause(); 
@@ -47,8 +47,17 @@ function clicked(num) {
   else {
     const tmpArray = [my_answer]
     answerArray = [...answerArray, ...tmpArray];
-    document.getElementById(num).style.boxShadow='4px 8px 0 rgb(30,2,255,0.7)';
+    document.getElementById(num).style.boxShadow='5px 8px 0 #8d2cd37b';
   }
+
+  // 클릭시 효과음
+  const audio = document.getElementById('clicksound'); 
+  if (audio.paused) { 
+      audio.play(); 
+  } else { 
+      audio.pause(); 
+      audio.currentTime = 0 
+  } 
 }
 
 // [다시하기] 버튼
@@ -67,8 +76,7 @@ function answer() {
   const answer = [0, 1, 2, 4, 7];
   const finalAnswer = answerArray.sort();
 
-  // 모달창 뜰 때 스크롤과 클릭 잠금
-  document.getElementById('contents').classList.add('scrolllock');
+  // 모달창 뜰 때 클릭 잠금
   document.getElementById('main').classList.add('clicklock');
 
   if ((JSON.stringify(finalAnswer)) === JSON.stringify(answer)) {
@@ -76,7 +84,7 @@ function answer() {
     const correct = document.getElementById('correct');
     correct.style.display = 'flex';
 
-    // 효과음
+    // 정답 효과음
     const audio = document.getElementById('correctsound'); 
     if (audio.paused) { 
         audio.play(); 
@@ -84,14 +92,14 @@ function answer() {
         audio.pause(); 
         audio.currentTime = 0 
     } 
-
   }
+
   else {
     // 오답일 때 보여줄 모달창
     const wrong = document.getElementById('wrong');
     wrong.style.display = 'flex';
 
-    // 효과음
+    // 오답 효과음
     const audio = document.getElementById('wrongsound'); 
     if (audio.paused) { 
         audio.play(); 
@@ -106,8 +114,7 @@ function answer() {
 function closewrong() {
   const wrong = document.getElementById('wrong');
   wrong.style.display = 'none';
-  // 스크롤과 클릭 잠금 해제
-  document.getElementById('contents').classList.remove('scrolllock');
+  // 클릭 잠금 해제
   document.getElementById('main').classList.remove('clicklock');
 }
 
@@ -115,23 +122,12 @@ function closewrong() {
 function closecorrect() {
   const correct = document.getElementById('correct');
   correct.style.display = 'none';
-  // 스크롤과 클릭 잠금 해제
-  document.getElementById('contents').classList.remove('scrolllock');
+  // 클릭 잠금 해제
   document.getElementById('main').classList.remove('clicklock');
 }
   
 // [이미지 출처 보기] 토글 버튼
 function ref(id) {
   const reference = document.getElementById(id);
-  reference.style.display = ((reference.style.display!='none') ? 'none' : 'flex')
-}
-
-function clicksound() { 
-  const audio = document.getElementById('clicksound'); 
-  if (audio.paused) { 
-      audio.play(); 
-  } else{ 
-      audio.pause(); 
-      audio.currentTime = 0 
-  } 
+  reference.style.visibility = ((reference.style.visibility!='hidden') ? 'hidden' : 'visible')
 }

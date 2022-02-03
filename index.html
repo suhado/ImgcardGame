@@ -14,8 +14,9 @@
   <audio id='wrongsound' src='./sound/wrong.WAV'></audio>
 
   <header id="header">
+    <img class="mainpage" id="mute" src="img/no-sound.png" onclick="mute()">
     <h2 id="title">수하의 취향을 맞춰줘!</h2>
-    <img id="mute" src="img/no-sound.png" onclick="mute()">
+    <div id="background"></div>
   </header>
     <div class="landing" id="start">
       <img id="startText" src="img/start.png">
@@ -25,7 +26,7 @@
 
   <main id="main">
     <section>
-      <div class="cardSet mainpage" style="visibility: hidden" onclick="clicksound()">
+      <div class="cardSet mainpage">
         <img class="card" onclick="clicked(this.id)" id="0" src='img/그림1.png' alt="coffee icon">
         <img class="card" onclick="clicked(this.id)" id="1" src='img/그림2.png' alt="drawing icon">
         <img class="card" onclick="clicked(this.id)" id="2"  src='img/그림3.png' alt="horrormovie icon">
@@ -38,7 +39,7 @@
     </section>
 
     <section>
-      <div class="btns mainpage" style="visibility: hidden"> 
+      <div class="btns mainpage"> 
         <button id="restart" onclick="restart()">다시하기</button>
         <button id="answer" onclick="answer()">정답 확인하기</button>
       </div>
@@ -65,7 +66,7 @@
 
   <footer>
     <buton id="ref_btn" onclick="ref('refs')";>이미지 출처 보기 ⬇️</button>
-      <div id="refs" style="display:none;">
+      <div class="refs" id="refs" style="visibility: hidden;">
         <a href="https://www.flaticon.com/free-icons/music" title="music icons">Music icons created by Freepik - Flaticon</a>
         <a href="https://www.flaticon.com/free-icons/beer" title="beer icons">Beer icons created by Freepik - Flaticon</a>
         <a href="https://www.flaticon.com/free-icons/books" title="books icons">Books icons created by Freepik - Flaticon</a>
