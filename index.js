@@ -8,7 +8,23 @@ function start() {
     const item = main.item(i);
     item.style.visibility='visible';
   }
+
+  // bgm
+  const audio = document.getElementById('bgm'); 
+  if (audio.paused) { 
+      audio.play(); 
+  } else {  
+      audio.pause(); 
+      audio.currentTime = 0 
+  } 
 }
+
+// [bgm 음소거] 버튼
+function mute() {
+  const audio = document.getElementById('bgm'); 
+    audio.pause(); 
+}
+
 
 const card = [0, 1, 2, 3, 4, 5, 6, 7];
 let answerArray = [];
@@ -60,11 +76,29 @@ function answer() {
     const correct = document.getElementById('correct');
     correct.style.display = 'flex';
 
+    // 효과음
+    const audio = document.getElementById('correctsound'); 
+    if (audio.paused) { 
+        audio.play(); 
+    } else{ 
+        audio.pause(); 
+        audio.currentTime = 0 
+    } 
+
   }
   else {
     // 오답일 때 보여줄 모달창
     const wrong = document.getElementById('wrong');
     wrong.style.display = 'flex';
+
+    // 효과음
+    const audio = document.getElementById('wrongsound'); 
+    if (audio.paused) { 
+        audio.play(); 
+    } else{ 
+        audio.pause(); 
+        audio.currentTime = 0 
+    } 
   }
 }
 
@@ -90,4 +124,14 @@ function closecorrect() {
 function ref(id) {
   const reference = document.getElementById(id);
   reference.style.display = ((reference.style.display!='none') ? 'none' : 'flex')
+}
+
+function clicksound() { 
+  const audio = document.getElementById('clicksound'); 
+  if (audio.paused) { 
+      audio.play(); 
+  } else{ 
+      audio.pause(); 
+      audio.currentTime = 0 
+  } 
 }

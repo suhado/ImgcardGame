@@ -8,17 +8,24 @@
 </head>
 
 <body id="contents">
-  <header>
+  <audio id='clicksound' src='./sound/clicksound.mp3'></audio>
+  <audio id='bgm' src='./sound/모든여름 inst.mp3'></audio>
+  <audio id='correctsound' src='./sound/correct.WAV'></audio>
+  <audio id='wrongsound' src='./sound/wrong.WAV'></audio>
+
+  <header id="header">
     <h2 id="title">수하의 취향을 맞춰줘!</h2>
+    <img id="mute" src="img/no-sound.png" onclick="mute()">
+  </header>
     <div class="landing" id="start">
       <img id="startText" src="img/start.png">
       <button id="startbtn" onclick="start()">시작하기</button>
+      
     </div>
-  </header>
 
   <main id="main">
     <section>
-      <div class="cardSet mainpage" style="visibility: hidden">
+      <div class="cardSet mainpage" style="visibility: hidden" onclick="clicksound()">
         <img class="card" onclick="clicked(this.id)" id="0" src='img/그림1.png' alt="coffee icon">
         <img class="card" onclick="clicked(this.id)" id="1" src='img/그림2.png' alt="drawing icon">
         <img class="card" onclick="clicked(this.id)" id="2"  src='img/그림3.png' alt="horrormovie icon">
@@ -70,6 +77,7 @@
         <a href="https://www.flaticon.com/free-icons/film" title="film icons">Film icons created by Octopocto - Flaticon</a>
         <a href="https://www.flaticon.com/free-icons/close" title="close icons">Close icons created by Pixel perfect - Flaticon</a>
         <a href="https://www.flaticon.com/free-icons/sad" title="sad icons">Sad icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/silent" title="silent icons">Silent icons created by Freepik - Flaticon</a>
       </div>
   </footer>
   <script type="text/javascript" src="index.js"></script>
