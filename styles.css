@@ -205,14 +205,12 @@
   }
 
   #refs {
-    font-family: 'Andada Pro', serif;
     display: flex;
     font-size: 2px;
     flex-direction: column;
     justify-content: center;
     color: rgba(55, 54, 54, 0.3);
     text-decoration: none;
-    margin: 0.5rem;
   }
 
   .modal {
