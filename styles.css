@@ -2,7 +2,7 @@
 
   body {
     position: fixed;
-    top: 55%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 500px;
@@ -131,12 +131,22 @@
     cursor: pointer; 
     outline: none; 
     box-shadow: 1px 4px 0 rgba(0, 0, 0, 0.3); 
+    animation-fill-mode: forwards;
   } 
   
   .card:active { 
-    box-shadow: 1px 1px 0 rgb(0,0,0,0.5); 
+    box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
+    border: 3px solid rgb(200, 230, 80);
     position: relative; 
     top:3px;
+  }
+
+  .card:hover {
+    border: 3px solid rgb(200, 230, 80);
+  }
+
+  .card.clicked {
+    border: 3px solid rgb(200, 230, 80);
   }
 
   .btns {
@@ -216,24 +226,24 @@
   .modal {
     z-index: 9;
     position: fixed;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
-  .modal_correct{
+  .modal_show {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .modal_wrong{
+  .inmodal{
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  #wrong {
+  #correct, #wrong {
     border-radius: 5px;
     justify-content: center;
     background-color: thistle;
@@ -241,26 +251,11 @@
     flex-direction: column;
     padding: 20px;
   }
-
-  #correct {
-    border-radius: 5px;
-    justify-content: center;
-    background-color: thistle;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-  }
-
+  
   #correctImg {
     width: 130px;
     height: 130px;
     border-radius: 100px;
-  }
-
-  #correctText {
-    display: flex;
-    width: 350px;
-    margin: 20px;
   }
 
   #wrongImg {
@@ -269,13 +264,13 @@
     margin: 5px;
   }
 
-  #wrongText {
+  #correctText, #wrongText {
     display: flex;
     width: 350px;
     margin: 20px;
   }
 
-  #closeicon {
+  .closeicon {
     display: flex;
     width: 15px;
     height: 15px;

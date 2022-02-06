@@ -14,63 +14,62 @@
   <audio id='wrongsound' src='./sound/wrong.WAV'></audio>
 
   <header id="header">
-    <img class="mainpage" id="soundoff" src="img/sound.png" alt="soundoffbtn" onclick="soundoff()" >
-    <img class="mainpage" id="soundon" src="img/no-sound.png" alt="soundonbtn" onclick="soundon()" style="display: none;">
+    <img class="mainpage" id="soundoff" src="img/sound.png" alt="soundoffbtn">
+    <img class="mainpage" id="soundon" src="img/no-sound.png" alt="soundonbtn" style="display: none;">
     <h2 id="title">수하의 취향을 맞춰줘!</h2>
     <div id="background"></div>
   </header>
     <div class="landing" id="start">
       <img id="startText" src="img/start.png" alt="gamedescription">
-      <button id="startbtn" onclick="start()">시작하기</button>
+      <button id="startbtn">시작하기</button>
       
     </div>
 
   <main id="main">
       <div class="board">
         <div class="cardSet mainpage">
-          <img class="card" onclick="clicked(this.id)" id="0" src='img/1.png' alt="documentary icon">
-          <img class="card" onclick="clicked(this.id)" id="1" src='img/2.png' alt="coffee icon">
-          <img class="card" onclick="clicked(this.id)" id="2"  src='img/3.png' alt="reading icon">
-          <img class="card" onclick="clicked(this.id)" id="3" src='img/4.png' alt="beer icon">
-          <img class="card" onclick="clicked(this.id)" id="4" src='img/5.png' alt="walk icon">
-          <img class="card" onclick="clicked(this.id)" id="5"  src='img/6.png' alt="painting icon">
-          <img class="card" onclick="clicked(this.id)" id="6"  src='img/7.png' alt="horrormovie icon">
-          <img class="card" onclick="clicked(this.id)" id="7"  src='img/8.png' alt="music icon">
+          <img class="card" id="0" src='img/1.png' alt="documentary icon">
+          <img class="card" id="1" src='img/2.png' alt="coffee icon">
+          <img class="card" id="2"  src='img/3.png' alt="reading icon">
+          <img class="card" id="3" src='img/4.png' alt="beer icon">
+          <img class="card" id="4" src='img/5.png' alt="walk icon">
+          <img class="card" id="5"  src='img/6.png' alt="painting icon">
+          <img class="card" id="6"  src='img/7.png' alt="horrormovie icon">
+          <img class="card" id="7"  src='img/8.png' alt="music icon">
         </div>
       </section>
   
       <section>
         <div class="btns mainpage"> 
-          <button id="restart" onclick="restart()">다시하기</button>
-          <button id="answer" onclick="answer()">정답 확인하기</button>
+          <button id="restart">다시하기</button>
+          <button id="answer">정답 확인하기</button>
         </div>
       </div>   
   </main>
     <section>
       <div class="modal" id="correct" style="display: none;">
-        <div class="modal_correct">
+        <div class="inmodal">
           <img id="correctImg" src="img/me.PNG" alt="suha icon">
           <img id="correctText" src="img/correctText.png" alt="correct text">
-          <img id="closeicon" onclick="closecorrect()" src="img/close.png" alt="close icon">
+          <img class="closeicon" id="correctclose" src="img/close.png" alt="close icon">
         </div>
       </div>
   
       <div class="modal" id="wrong" style="display: none;">
-        <div class="modal_wrong">
+        <div class="inmodal">
           <img id="wrongImg" src="img/sad.png" alt="sad icon">
           <img id="wrongText" src="img/wrongText.png" alt="wrong text">
-          <img id="closeicon" onclick="closewrong()" src="img/close.png" alt="close icon">
+          <img class="closeicon" id="wrongclose" src="img/close.png" alt="close icon">
         </div>
       </div>
     </section>
-  
 
   <footer>
-    <buton id="ref_btn" onclick="ref('refs')";>이미지 출처 보기 ⬇️</button>
+    <buton id="ref_btn">이미지 출처 보기 ⬇️</button>
       <div class="refs" id="refs" style="visibility: hidden;">
         <a href="https://www.flaticon.com" title="music icons">무료 아이콘 사이트 - Flaticon</a>
       </div>
   </footer>
-  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="index.js"r></script>
 </body>
 </html>
