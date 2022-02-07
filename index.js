@@ -149,4 +149,3 @@ reference.addEventListener('mouseover', function() {
 reference.addEventListener('mouseout', function() {
   ref.style.visibility = 'hidden'
 })
-
