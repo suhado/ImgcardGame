@@ -29,25 +29,11 @@
     font-weight: 800;
     z-index: 9;
   }
-
+  
   .mainpage {
     visibility: hidden;
   }
-
-  /* bgm 버튼 */
-  .soundbtn {
-    display: none;
-  }
   
-  .soundbtn.show-soundbtn {
-    display: flex;
-    position: absolute;
-    top: 3%;
-    width: 20px;
-    cursor: pointer;
-    z-index: 9;
-  }
-
   #background {
     position: absolute;
     top: 0.5rem;
@@ -55,6 +41,28 @@
     height: 546px;
     border: 1px solid;
     z-index: 0;
+  }
+
+  /* bgm 버튼 */
+  #sound-contain {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    top: 1rem;
+    left: 5rem;
+  }
+
+  .soundbtn {
+    display: none;
+  }
+  
+  .soundbtn.show-soundbtn {
+    display: flex;
+    position: absolute;
+    width: 20px;
+    cursor: pointer;
+    z-index: 9;
+    right: 3rem;
   }
 
   /* 시작 이미지 */

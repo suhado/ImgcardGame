@@ -14,41 +14,45 @@
   <audio id='correctsound' src='./sound/correct.WAV'></audio>
   <audio id='wrongsound' src='./sound/wrong.WAV'></audio>
 
+  <!-- header -->
   <header>
     <h2 id="title">수하의 취향을 맞춰줘!</h2>
-    <img class="mainpage soundbtn" id="soundoff" src="img/sound.png" alt="soundoffbtn">
-    <img class="mainpage soundbtn" id="soundon" src="img/no-sound.png" alt="soundonbtn">
+    <div id="background">
+      <div id="sound-contain">
+        <img class="mainpage soundbtn" id="soundoff" src="img/sound.png" alt="soundoffbtn">
+        <img class="mainpage soundbtn" id="soundon" src="img/no-sound.png" alt="soundonbtn">
+      </div>
+    </div>
+  </header>
+
+  <!-- 랜딩페이지 -->
+  <div class="start-img" id="start">
+    <img id="start-text" src="img/start.png" alt="gamedescription">
+    <button id="startbtn">시작하기</button>
   </div>
-    <div id="background"></div>
-    <!-- 랜딩페이지 -->
-    <div class="start-img" id="start">
-      <img id="start-text" src="img/start.png" alt="gamedescription">
-      <button id="startbtn">시작하기</button>
-      
-    </header>
+
   <!-- 게임보드, 카드셋, 버튼  -->
   <main id="main">
-      <div class="board">
-        <div class="cardSet mainpage">
-          <img class="card" id="0" src='img/1.png' alt="documentary icon">
-          <img class="card" id="1" src='img/2.png' alt="coffee icon">
-          <img class="card" id="2"  src='img/3.png' alt="reading icon">
-          <img class="card" id="3" src='img/4.png' alt="beer icon">
-          <img class="card" id="4" src='img/5.png' alt="walk icon">
-          <img class="card" id="5"  src='img/6.png' alt="painting icon">
-          <img class="card" id="6"  src='img/7.png' alt="horrormovie icon">
-          <img class="card" id="7"  src='img/8.png' alt="music icon">
-        </div>
-      </section>
-  
-      <section>
-        <div class="btns mainpage"> 
+    <div class="board">
+      <div class="cardSet mainpage">
+        <img class="card" id="0" src='img/1.png' alt="documentary icon">
+        <img class="card" id="1" src='img/2.png' alt="coffee icon">
+        <img class="card" id="2"  src='img/3.png' alt="reading icon">
+        <img class="card" id="3" src='img/4.png' alt="beer icon">
+        <img class="card" id="4" src='img/5.png' alt="walk icon">
+        <img class="card" id="5"  src='img/6.png' alt="painting icon">
+        <img class="card" id="6"  src='img/7.png' alt="horrormovie icon">
+        <img class="card" id="7"  src='img/8.png' alt="music icon">
+      </div>
+
+      <div class="btns mainpage"> 
           <button id="restart">다시하기</button>
           <button id="answer">정답 확인하기</button>
         </div>
-      </div>   
+      </div> 
   </main>
-    <!-- 정답확인 모달 -->
+
+  <!-- 정답확인 모달 -->
   <section>
     <div class="popup" id="correct">
       <div class="modal-contents">
@@ -67,7 +71,7 @@
     </div>
   </section>
 
-  <!-- 이미지 출처 -->
+  <!-- footer -->
   <footer>
     <buton id="ref-btn">이미지 출처 보기 ⬇️</button>
       <div class="refs" id="refs">
