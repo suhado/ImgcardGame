@@ -14,8 +14,8 @@
   <audio id='wrongsound' src='./sound/wrong.WAV'></audio>
 
   <header>
-    <img class="mainpage" id="soundoff" src="img/sound.png" alt="soundoffbtn">
-    <img class="mainpage" id="soundon" src="img/no-sound.png" alt="soundonbtn" style="display: none;">
+    <img class="mainpage soundbtn" id="soundoff" src="img/sound.png" alt="soundoffbtn">
+    <img class="mainpage soundbtn" id="soundon" src="img/no-sound.png" alt="soundonbtn">
     <h2 id="title">수하의 취향을 맞춰줘!</h2>
   </header>
     <div id="background"></div>
@@ -47,7 +47,7 @@
       </div>   
   </main>
     <section>
-      <div class="modal" id="correct" style="display: none;">
+      <div class="popup" id="correct">
         <div class="inmodal">
           <img id="correctImg" src="img/me.PNG" alt="suha icon">
           <img id="correctText" src="img/correctText.png" alt="correct text">
@@ -55,7 +55,7 @@
         </div>
       </div>
   
-      <div class="modal" id="wrong" style="display: none;">
+      <div class="popup" id="wrong">
         <div class="inmodal">
           <img id="wrongImg" src="img/sad.png" alt="sad icon">
           <img id="wrongText" src="img/wrongText.png" alt="wrong text">
@@ -66,7 +66,7 @@
 
   <footer>
     <buton id="ref_btn">이미지 출처 보기 ⬇️</button>
-      <div id="refs" style="visibility: hidden;">
+      <div class="refs" id="refs">
         <a href="https://www.flaticon.com" title="music icons">무료 아이콘 사이트 - Flaticon</a>
       </div>
   </footer>

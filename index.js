@@ -1,5 +1,8 @@
 // (bgm 선택)
 const bgm = document.getElementById('bgm');
+// (bgm 버튼 선택)
+const soundoff = document.getElementById('soundoff');
+const soundon = document.getElementById('soundon');
 
 // [시작하기] 버튼
 const startbtn  = document.getElementById('start');
@@ -14,27 +17,23 @@ startbtn.addEventListener('click', function() {
   }
 
   // 시작하기 버튼 누르면 bgm 실행
+  soundoff.classList.add('showsoundbtn');
   bgm.play();
 })
 
 // bgm 버튼
 // [soundoff] 버튼
-const soundoff = document.getElementById('soundoff');
-const soundon = document.getElementById('soundon');
-
 soundoff.addEventListener('click', function() {
   bgm.pause();
-
-  soundon.style.display='flex';
-  soundoff.style.display='none';
+  soundoff.classList.toggle('showsoundbtn');
+  soundon.classList.toggle('showsoundbtn');
 })
 
 // [soundon] 버튼
 soundon.addEventListener('click', function() {
   bgm.play();
-
-  soundon.style.display='none';
-  soundoff.style.display='flex';
+  soundoff.classList.toggle('showsoundbtn');
+  soundon.classList.toggle('showsoundbtn');
 })
 
 // 카드 클릭시
@@ -74,9 +73,8 @@ restart.addEventListener('click', function() {
 })
 
 
-// (정답 모달 선택)
+// (모달 선택)
 const correct = document.getElementById('correct');
-// (오답 모달 선택)
 const wrong = document.getElementById('wrong');
 
 // [정답 확인하기] 버튼
@@ -102,39 +100,51 @@ checkanswer.addEventListener('click', function() {
 
     // 정답일 때
     if ((JSON.stringify(finalresult)) == JSON.stringify(answers)) {      
-      // 정답일 때 보여줄 모달창
-      correct.style.display = 'flex';
+      // 정답일 때 보여줄 모달창 오픈
+      correct.classList.toggle("modal")
 
       // 정답 효과음
       const correctsound = document.getElementById('correctsound'); 
-      correctsound.play(); 
+      if (correctsound.paused) {
+        correctsound.play();
+      } else { 
+        correctsound.pause();
+        correctsound.play(); 
+        correctsound.currentTime = 0 
+      }
     }
+
     // 오답일 때
     else {
-      // 오답일 때 보여줄 모달창
-      wrong.style.display = 'flex';
+      // 오답일 때 보여줄 모달창 오픈
+      wrong.classList.toggle("modal")
 
       // 오답 효과음
       const wrongsound = document.getElementById('wrongsound');
-      wrongsound.play();
+      if (wrongsound.paused) {
+        wrongsound.play();
+      } else { 
+        wrongsound.pause();
+        wrongsound.play(); 
+        wrongsound.currentTime = 0 
+      }
     }
 });
 
 
-// 정답일 때 모달창 [닫기 버튼]
+// 오답일 때 모달창 [닫기 버튼]
 const wrongclose = document.getElementById('wrongclose');
 wrongclose.addEventListener('click', function() {
-  wrong.style.display = 'none';
+  wrong.classList.toggle("modal");
 
   // 클릭 잠금 해제
   main.classList.toggle('clicklock');
 })
 
-
 // 정답일 때 모달창 [닫기 버튼]
 const correctclose = document.getElementById('correctclose');
 correctclose.addEventListener('click', function() {
-  correct.style.display = 'none';
+  correct.classList.toggle("modal");
 
   // 클릭 잠금 해제
   main.classList.toggle('clicklock');
@@ -144,8 +154,8 @@ correctclose.addEventListener('click', function() {
 const reference = document.getElementById('ref_btn');
 const ref = document.getElementById('refs');
 reference.addEventListener('mouseover', function() {
-  ref.style.visibility = 'visible'
+  ref.classList.toggle("showref");
 })
 reference.addEventListener('mouseout', function() {
-  ref.style.visibility = 'hidden'
+  ref.classList.toggle("showref")
 })

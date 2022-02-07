@@ -19,7 +19,12 @@
     visibility: hidden;
   }
 
-  #soundon, #soundoff {
+  .soundbtn {
+    display: none;
+  }
+  
+  .soundbtn.showsoundbtn {
+    display: flex;
     position: fixed;
     right: 5rem;
     top: 5rem;
@@ -199,12 +204,22 @@
     border-color: #a4d9fa;
   }
 
-  .modal {
+  .popup {
+    display: none;
+   }
+
+  .popup.modal {
     z-index: 9;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 5px;
+    justify-content: center;
+    background-color: thistle;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
   }
 
   .inmodal{
@@ -221,16 +236,6 @@
     cursor: pointer;
   }
 
-  #correct,
-  #wrong {
-    border-radius: 5px;
-    justify-content: center;
-    background-color: thistle;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-  }
-  
   #correctText,
   #wrongText {
     display: flex;
@@ -272,7 +277,12 @@
     text-align: center;
   }
 
-  #refs {
+  .refs {
+    visibility: hidden;
+  }
+
+  .refs.showref {
+    visibility: visible;
     display: flex;
     font-size: 2px;
     flex-direction: column;
