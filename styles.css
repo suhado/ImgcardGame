@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Andada+Pro&family=Gowun+Dodum&display=swap');
 
   body {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 2rem;
+    position: relative;
+    top: 7rem;
   }
 
+  /* header */
   header {
     display: flex;
     flex-direction: column;
@@ -17,90 +18,89 @@
   }
 
   #title {
-    z-index: 9;
-    font-family: 'Gowun Dodum', sans-serif;
-    font-weight: 800;
-    font-size: 1.5rem;
     display: flex;
-    position: fixed;
+    position: absolute;
     align-items: center;
     justify-content: center;
     padding: 0.5rem;
-    top: 1rem;
     background-color: white;
+    font-size: 1.5rem;
+    font-family: 'Gowun Dodum', sans-serif;
+    font-weight: 800;
+    z-index: 9;
   }
 
   .mainpage {
     visibility: hidden;
   }
 
+  /* bgm 버튼 */
   .soundbtn {
     display: none;
   }
   
   .soundbtn.show-soundbtn {
     display: flex;
-    position: fixed;
-    top: 4.5rem;
-    right: 7rem;
+    position: absolute;
+    top: 3%;
     width: 20px;
-    height: 20px;
     cursor: pointer;
     z-index: 9;
   }
 
   #background {
-    position: fixed;
-    top: 3.5rem;
+    position: absolute;
+    top: 0.5rem;
     width: 456px;
     height: 546px;
     border: 1px solid;
     z-index: 0;
   }
 
+  /* 시작 이미지 */
   .start-img {
-    position: fixed;
-    top: 47%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: thistle;
-    border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: thistle;
+    border-radius: 5px;
     z-index: 8;
   }
 
   #start-text {
-    justify-content: center;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    justify-content: center;
     width: 330px;
+    padding: 20px;
   }
 
   #startbtn {
-    height: 35px;
-    width: 140px;
+    display: flex;
     justify-content: center;
     align-items: center;
+    width: 140px;
+    height: 35px;
+    padding: 2px 12px;
+    margin-bottom: 1rem;
     background-color: #f3e7ff;
     border: 1px solid #efe0fe;
     border-radius: 11px;
     color: #8d2cd3;
     cursor: pointer;
-    display: flex;
     font-size: 0.9rem;
     font-weight: 700;
     line-height: 30px;
-    padding: 2px 12px;
     text-align: left;
     text-decoration: none;
     text-shadow: none;
     transition: border .2s ease-in-out;
     touch-action: manipulation;
-    margin-bottom: 1rem;
   }
 
   #startbtn:hover {
@@ -108,12 +108,13 @@
     border-color: #cca4fa;
   }
 
+  /* 게임 메인 화면 */
   #main {
     z-index: 7;
-    justify-content: center;
-    align-items: center;
     display: flex;
     height: 510px;
+    justify-content: center;
+    align-items: center;
   }
 
   .board {
@@ -129,23 +130,23 @@
     row-gap: 0.4rem;
     justify-items: center;
     align-items: center;
-    margin-top: 3.5rem;
+    margin-top: 2.7rem;
   }
 
   .card { 
     z-index: 8;
     width: 90px;
     border-radius: 20%;
+    box-shadow: 1px 4px 0 rgb(0 0 0 / 30%);
     cursor: pointer;
     outline: none;
-    box-shadow: 1px 4px 0 rgb(0 0 0 / 30%);
     animation-fill-mode: forwards;
   } 
   
   .card:active { 
+    position: relative; 
     box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
     border: 3px solid rgb(200, 230, 80);
-    position: relative; 
     top:3px;
   }
 
@@ -157,30 +158,31 @@
     border: 3px solid rgb(200, 230, 80);
   }
 
+  /* 다시하기, 정답 확인하기 버튼 */
   .btns {
-    margin-top: 1.5rem;
     display: flex;
+    margin-top: 1.5rem;
     column-gap: 4rem;
     text-align: center;
     justify-content: center;
   }
 
   #answer, #restart {
+    display: flex;
     z-index: 8;
     height: 40px;
     width: 140px;
+    padding: 2px 12px;
+    border-radius: 11px;
     justify-content: center;
     align-items: center;
-    border-radius: 11px;
     cursor: pointer;
-    display: flex;
     font-size: 1rem;
     font-weight: 700;
     line-height: 30px;
-    padding: 2px 12px;
-    text-align: left;
     text-decoration: none;
     text-shadow: none;
+    text-align: left;
     transition: border .2s ease-in-out;
     touch-action: manipulation;
   }
@@ -207,22 +209,23 @@
     border-color: #a4d9fa;
   }
 
+  /* 정답, 오답 팝업 */
   .popup {
     display: none;
    }
 
   .popup.modal {
-    z-index: 9;
-    position: fixed;
-    top: 48%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-    justify-content: center;
-    background-color: thistle;
     display: flex;
     flex-direction: column;
+    position: absolute;
+    justify-content: center;
     padding: 13px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    border-radius: 5px;
+    background-color: thistle;
   }
 
   .modal-contents{
@@ -259,21 +262,23 @@
     pointer-events : none;
   }
 
+  /* footer */
   footer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-items: center;
+    top: 35rem;
     font-family: 'Gowun Dodum', sans-serif;
     font-size: 3px;
     color: rgb(0,0,0,0.3);
-    display: flex;
-    flex-direction: column;
-    margin-top: 4rem;
-    justify-items: center;
   }
 
   #ref-btn {
-    border: none;
-    text-decoration: none;
-    cursor: pointer;
     text-align: center;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
   }
 
   .refs {
@@ -281,11 +286,11 @@
   }
 
   .refs.show-ref {
-    visibility: visible;
     display: flex;
-    font-size: 2px;
     flex-direction: column;
+    visibility: visible;
     justify-content: center;
     color: rgba(55, 54, 54, 0.3);
+    font-size: 2px;
     text-decoration: none;
   }
