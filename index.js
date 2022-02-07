@@ -17,7 +17,7 @@ startbtn.addEventListener('click', function() {
   }
 
   // 시작하기 버튼 누르면 bgm 실행
-  soundoff.classList.add('showsoundbtn');
+  soundoff.classList.add('show-soundbtn');
   bgm.play();
 })
 
@@ -25,15 +25,15 @@ startbtn.addEventListener('click', function() {
 // [soundoff] 버튼
 soundoff.addEventListener('click', function() {
   bgm.pause();
-  soundoff.classList.toggle('showsoundbtn');
-  soundon.classList.toggle('showsoundbtn');
+  soundoff.classList.toggle('show-soundbtn');
+  soundon.classList.toggle('show-soundbtn');
 })
 
 // [soundon] 버튼
 soundon.addEventListener('click', function() {
   bgm.play();
-  soundoff.classList.toggle('showsoundbtn');
-  soundon.classList.toggle('showsoundbtn');
+  soundoff.classList.toggle('show-soundbtn');
+  soundon.classList.toggle('show-soundbtn');
 })
 
 // 카드 클릭시
@@ -89,7 +89,7 @@ checkanswer.addEventListener('click', function() {
   finalresult = [];
 
   // 모달창 뜰 때 클릭 잠금
-  main.classList.add('clicklock');
+  main.classList.add('click-lock');
 
   // nodeList 배열로 변환
   const myanswers = document.querySelectorAll('.clicked');
@@ -138,7 +138,7 @@ wrongclose.addEventListener('click', function() {
   wrong.classList.toggle("modal");
 
   // 클릭 잠금 해제
-  main.classList.toggle('clicklock');
+  main.classList.toggle('click-lock');
 })
 
 // 정답일 때 모달창 [닫기 버튼]
@@ -147,15 +147,15 @@ correctclose.addEventListener('click', function() {
   correct.classList.toggle("modal");
 
   // 클릭 잠금 해제
-  main.classList.toggle('clicklock');
+  main.classList.toggle('click-lock');
 })
   
 // [이미지 출처 보기] 토글 버튼
-const reference = document.getElementById('ref_btn');
+const reference = document.getElementById('ref-btn');
 const ref = document.getElementById('refs');
 reference.addEventListener('mouseover', function() {
-  ref.classList.toggle("showref");
+  ref.classList.toggle("show-ref");
 })
 reference.addEventListener('mouseout', function() {
-  ref.classList.toggle("showref")
+  ref.classList.toggle("show-ref")
 })
